@@ -1,0 +1,459 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="/static/images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <div class="wrapper">
+      <!-- end loader -->
+      <div class="sidebar">
+         <!-- Sidebar  -->
+         <!-- <nav id="sidebar">
+            <div id="dismiss">
+               <i class="fa fa-arrow-left"></i>
+            </div>
+            <ul class="list-unstyled components">
+               <li class="active"> <a href="#">Home</a> </li>
+               <li><a href="#about">About </a> </li>
+               <li><a href="#work">Work</a> </li>
+               <li><a href="#contact">Contact </a> </li>
+            </ul>
+            </nav> -->
+      </div>
+      <div id="content">
+         <!-- header -->
+         <header>
+            <!-- header inner -->
+            {% for i in data %}
+            <div class="header">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                           <div class="center-desk">
+                              <div class="logo">
+                                 <!-- <img src="images/logo.png" alt="#" /> -->
+                                 <a href="{% url 'landing' %}"> <label for="">{{i.title}}</label> <img
+                                       src="/static/images/coding.png" alt="#" /></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <ul class="btn">
+                           <li class="down_btn"><a href="#">Download</a></li>
+                           <li><a href="#">Sign Up</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                           <li><button type="button" id="sidebarCollapse">
+                                 <img src="/static/images/menu_icon.png" alt="#" />
+                              </button>
+                           </li>
+                        </ul>
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- end header inner -->
+         <!-- end header -->
+         <!-- banner -->
+         <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+               <li data-target="#myCarousel" data-slide-to="1"></li>
+               <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container-fluid">
+                     <div class="carousel-caption">
+                        <div class="row">
+                           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                              <div class="text-bg">
+                                 <h1>Get<br> Thinking A <br>long time</h1>
+                                 <p>{{i.banner}} </p>
+                                 <a class="read_more" href="#">Read more</a>
+                              </div>
+                           </div>
+                           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                              <div class="images_box">
+                                 <figure>
+                                    <img
+                                       src="https://www.capthronetechnologies.com/assets/images/dynamic-web-portal-development-company.png"
+                                       width="40" height="40" alt="Description of the image">
+                                 </figure>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container-fluid ">
+                     <div class="carousel-caption">
+                        <div class="row">
+                           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                              <div class="text-bg">
+                                 <h1>Get<br> Thinking A <br>long time</h1>
+                                 <p>{{i.banner|title}}</p>
+                                 <a class="read_more" href="#">Read more</a>
+                              </div>
+                           </div>
+                           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                              <div class="images_box">
+                                 <figure><img src="https://cyntexa.com/wp-content/uploads/2022/07/Community-Cloud.png"
+                                       width="40" height="40">
+                                 </figure>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container-fluid">
+                     <div class="carousel-caption ">
+                        <div class="row">
+                           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                              <div class="text-bg">
+                                 <h1>Get<br> Thinking A <br>long time</h1>
+                                 <p>{{i.banner}}</p>
+                                 <a class="read_more" href="#">Read more</a>
+                              </div>
+                           </div>
+                           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                              <div class="images_box">
+                                 <figure><img
+                                       src="https://globaliasoft.com/wp-content/uploads/2021/09/PHP-Developers.png">
+                                 </figure>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+               <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+         </div>
+         <!-- end banner -->
+         <!-- about -->
+         <div id="about" class="about">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class="col-md-5">
+                     <div class="about_img">
+                        <figure><img
+                              src="https://img.freepik.com/premium-vector/business-couple-agrees-work-together-accepts-offer_18660-222.jpg?w=740"
+                              alt="#" /></figure>
+                     </div>
+                  </div>
+                  <div class="col-md-7">
+                     <div class="titlepage">
+                        <h2>About<span class="blu"></span></h2>
+                        <p>{{i.about}} </p>
+                        <!-- <a class="read_more">Read More</a> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end about -->
+         <!-- choose  section -->
+         <div class="choose ">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Why <span class="blu"> Choose Us</span></h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="choose_bg">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="row">
+                           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_right0">
+                              <ul class="easy">
+                                 <li class="active"><a href="#">Easy to cutomize</a></li>
+                                 <li><a href="#">More flexible</a></li>
+                                 <li><a href="#">Clean mode</a></li>
+                                 <li><a href="#">Ratinaready</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 padding_left0">
+                              <div class="choose_box">
+                                 <i><img src="/static/images/admin.png" alt="#" /></i>
+                                 <h3> Ad Minim</h3>
+                                 <p>{{i.admin|title}}
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end choose  section -->
+         <!-- work -->
+         <div id="work" class="work">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class="col-md-7">
+                     <div class="titlepage">
+                        <h2>How To <span class="blu">Works it</span></h2>
+                        <p>{{i.howtowork}} </p>
+                        <a class="read_more">Read More</a>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="work_img">
+                        <figure><img src="https://adscreen.net/img/markets/retail/img3.svg" alt="#" /></figure>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end work -->
+         <!-- request -->
+         <div id="contact" class="request">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage">
+                        <h2>Request <span class="white">A call Back</span></h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <form action="" method="POST">
+                              <div class="col-md-12 ">
+                                 {% csrf_token %}
+                                 <input class="contactus" placeholder="Full Name" type="type" required name="FullName">
+                              </div>
+                              <div class="col-md-12">
+                                 <input class="contactus" placeholder="Email" type="type" name="Email" required>
+                              </div>
+                              <div class="col-md-12">
+                                 <input class="contactus" placeholder="Phone Number" type="type" name="PhoneNumber"
+                                    required>
+                              </div>
+                              <!-- Message="Name" -->
+                              <div class="col-md-12">
+                                 <textarea class="textarea" placeholder="Message" type="type" required
+                                    name="Name"></textarea>
+                              </div>
+                              <div class="col-md-12">
+                                 <button type="button" class="send_btn" id="send">Send</button>
+                              </div>
+                           </form>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-6">
+                     <div id="map"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- footer -->
+   <footer>
+
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                  <div class="col-md-8 col-sm-6 mb-5">
+                     <div class="address">
+                        <h3>Address </h3>
+                        <h4 class="text-light">{{i.Adress}}</h4>
+                     </div>
+                     <ul class="location_icon">
+                        <li></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                      <div class="row">
+                          <div class="col-md-8 col-sm-6">
+                              <div class="address">
+                                 <h3>Address </h3>
+                              </div>
+                              <ul class="location_icon">
+                                 <li></li>
+                              </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6">
+                              <div class="address">
+                                  <h3>Links</h3>
+                                  <ul class="Menu_footer">
+                                      <li class="active"> <a href="#">Home</a> </li>
+                                      <li><a href="#about">About </a> </li>
+                                      <li><a href="#work">Work</a> </li>
+                                      <li><a href="#contact">Contact </a> </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div> -->
+                  <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                      <div class="row">
+                         <div class="col-md-5 col-sm-6">
+                              <div class="address">
+                                 <h3>Follow Us</h3>
+                              </div>
+                              <ul class="social_icon d-flex"  >
+                                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                  </li>
+                                  <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                              </ul>
+                          </div>
+                          <div class="col-md-7 col-sm-6">
+                              <div class="address">
+                                  <h3>Newsletter </h3>
+                              </div>
+                              <form class="bottom_form">
+                                  <input class="enter" placeholder="Enter Your Email" type="text" name="Enter Your Email">
+                                  <button class="sub_btn">subscribe</button>
+                              </form>
+                          </div>
+                      </div>
+                  </div> -->
+            </div>
+         </div>
+         <!-- <div class="copyright">
+            <div class="container">
+               <div class="row">
+                      <div class="col-md-12">
+                          <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free html
+                                  Templates</a></p>
+                      </div>
+                  </div>
+               </div>
+          </div> -->
+      </div>
+   </footer>
+   {% endfor %}
+   <!-- end footer -->
+   <script type="text/javascript">
+      $(document).ready(function () {
+         // $("#sidebar").mCustomScrollbar({
+         //    theme: "minimal"
+         // });
+
+         // $('#dismiss, .overlay').on('click', function () {
+         //    $('#sidebar').removeClass('active');
+         //    $('.overlay').removeClass('active');
+         // });
+
+         // $('#sidebarCollapse').on('click', function () {
+         //    $('#sidebar').addClass('active');
+         //    $('.overlay').addClass('active');
+         //    $('.collapse.in').toggleClass('in');
+         //    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+         // });
+      });
+   </script>
+   <script>
+      $(document).ready(function () {
+
+         $('#send').on('click', function () {
+            let FullName = $(`[name="FullName"]`).val();
+            let Email = $(`[name="Email"]`).val();
+            let PhoneNumber = $(`[name="PhoneNumber"]`).val();
+            let Name = $(`[name="Name"]`).val();
+
+            $.ajax({
+               url: "/send_landing/",
+               method: "POST",
+               headers: {
+                  "X-CSRFToken": "{{ csrf_token }}",
+                  "Content-Type": "application/x-www-form-urlencoded"
+               },
+               data: {
+                  FullName: FullName,
+                  Email: Email,
+                  PhoneNumber: PhoneNumber,
+                  Name: Name,
+               },
+               success: function (response) {
+                  alert("Data received:", response);
+               },
+               error: function (xhr, status, error) {
+                  // console.error("Request failed:", status, error);
+                  alert("Please Fill All The fields in Proper :", status, error);
+               }
+            })
+         })
+
+
+
+
+
+
+
+
+
+
+         // $(".fancybox").fancybox({
+         //    openEffect: "none",
+         //    closeEffect: "none"
+         // });
+
+         // $(".zoom").hover(function () {
+
+         //    $(this).addClass('transition');
+         // }, function () {
+
+         //    $(this).removeClass('transition');
+         // });
+      });
+   </script>
+   <script>
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+         var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {
+               lat: 27.518752,
+               lng: 77.749833
+            },
+         });
+
+         var image = '/static/images/maps-and-flags.png';
+         var beachMarker = new google.maps.Marker({
+            position: {
+               lat: 27.518752,
+               lng: 77.749833
+            },
+            map: map,
+            icon: image
+         });
+      }
+   </script>
+
+   {% endblock %}
